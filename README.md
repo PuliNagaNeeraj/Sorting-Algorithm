@@ -20,23 +20,49 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
-
-
-
-
+''' 
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: PULI NAGA NEERAJ
+RegisterNumber: 23004033
+'''
+def selection_sort(nums):
+    # write your code here using selection sort
+    for i in range(len(nums)):
+        lowest_value_index = i
+        for j in range (i+1 , len(nums)):
+            if nums[j] < nums[lowest_value_index]:
+                lowest_value_index = j
+        nums[i], nums[lowest_value_index] =nums[lowest_value_index], nums[i]
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 ```
 ii)	#Insertion Sort
 ```
-
-
-
-
-
-
+''' 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: PULI NAGA NEERAJ
+RegisterNumber: 23004033
+'''
+def insertion_sort(nums):
+    # Write your code here to sort the elements in the list using Insertion sort algorithm
+    for i in range(1,len(nums)):
+        item_to_insert=nums[i]
+        j=i-1
+        while j>=0 and nums[j] > item_to_insert:
+            nums[j+1]=nums[j]
+            j-=1
+        nums[j+1]=item_to_insert
+list_of_nums = eval(input())
+# use the insertion sort function to get the sorted list
+insertion_sort(list_of_nums)
+# print the sorted list
+print(list_of_nums)
 ```
 
 ## Output:
+![image](https://github.com/PuliNagaNeeraj/Sorting-Algorithm/assets/138849173/97af448b-50a1-4171-aa3a-b3c38e9ca386)
+![image](https://github.com/PuliNagaNeeraj/Sorting-Algorithm/assets/138849173/378d6e3c-64a7-42f6-b85a-1e05ed12ce25)
 
 
 ## Result:
